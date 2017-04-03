@@ -2,7 +2,7 @@ FROM jamesmontalvo3/meza-docker-pre-yum:latest
 MAINTAINER James Montalvo
 ENV container=docker
 
-RUN git clone -b docker-tags https://github.com/enterprisemediawiki/meza /opt/meza
+RUN git clone https://github.com/enterprisemediawiki/meza /opt/meza
 # COPY . /opt/meza
 
 RUN bash /opt/meza/src/scripts/getmeza.sh
