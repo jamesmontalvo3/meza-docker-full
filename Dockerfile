@@ -7,7 +7,7 @@ RUN git clone https://github.com/enterprisemediawiki/meza /opt/meza
 
 RUN bash /opt/meza/src/scripts/getmeza.sh
 
-RUN meza setup env monolith --fqdn="INSERT_FQDN" --db_pass=1234 --enable_email=false --private_net_zone=public
+RUN meza setup env monolith --fqdn="INSERT_FQDN" --db_pass=1234 --private_net_zone=public
 
 RUN ansible-vault decrypt /opt/conf-meza/secret/monolith/secret.yml --vault-password-file /opt/conf-meza/users/meza-ansible/.vault-pass-monolith.txt \
 	&& echo "" >> /opt/conf-meza/secret/monolith/secret.yml \
